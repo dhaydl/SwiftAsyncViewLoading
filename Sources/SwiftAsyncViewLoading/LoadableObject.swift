@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol WWLCLoadableObject: ObservableObject {
+public protocol LoadableObject: ObservableObject {
     associatedtype Output
     var state: LoadingState<Output> { get }
     func load()

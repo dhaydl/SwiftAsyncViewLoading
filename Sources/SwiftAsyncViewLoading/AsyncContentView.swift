@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AsyncContentView<Source: WWLCLoadableObject, Content: View>: View {
+public struct AsyncContentView<Source: WWLCLoadableObject, Content: View>: View {
     @ObservedObject public var source: Source
     public var content: (Source.Output) -> Content
 
