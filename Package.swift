@@ -7,7 +7,9 @@ let package = Package(
     name: "SwiftAsyncViewLoading",
     platforms: [
         .iOS(.v14),
-        .macOS(.v11)
+        .macOS(.v11),
+        .watchOS(.v6),
+        .tvOS(.v14)
     ],
     products: [
         .library(
