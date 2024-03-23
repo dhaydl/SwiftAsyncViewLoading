@@ -20,7 +20,9 @@ public struct AsyncContentView<Source: LoadableObject, Content: View>: View {
         switch source.state {
         case .idle:
             Color.clear
-            .onAppear(perform: source.load)
+            .task {
+                await source.load()
+            }
         case .loading:
             ProgressView()
         case .failed(let error):
